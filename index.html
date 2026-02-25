@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wrecking Shot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <h1>Wrecking Shot</h1>
+    <p class="subtitle">Launch 3 mystery projectiles and knock down the building.</p>
+
+    <section class="hud">
+      <div><strong>Shots Left:</strong> <span id="shots-left">3</span></div>
+      <div><strong>Building HP:</strong> <span id="building-hp">100</span></div>
+      <div><strong>Last Shot:</strong> <span id="last-shot">None yet</span></div>
+    </section>
+
+    <section class="controls">
+      <label for="angle">Angle: <span id="angle-value">45</span>°</label>
+      <input id="angle" type="range" min="20" max="80" value="45" />
+
+      <label for="power">Power: <span id="power-value">60</span></label>
+      <input id="power" type="range" min="30" max="100" value="60" />
+
+      <button id="launch-btn">Launch Projectile</button>
+      <button id="reset-btn">Reset Game</button>
+    </section>
+
+    <canvas id="game-canvas" width="960" height="540" aria-label="Projectile game area"></canvas>
+
+    <p id="message" class="message">Take your first shot!</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
